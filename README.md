@@ -59,6 +59,43 @@ HTML server, running html-based queries, downloading pages;
 CGI programming, programming a simple CGI form.
 
 
+
+### Solution for two inverted and connected flag
+
+```
+
+n=int(input("enter number upto which you want to display "))
+for i in range(0,n): #outer loop for number of rows
+x=65
+for j in range(1,n): #print chr value to n elements
+print(chr(x),end=" ")
+x=x+1
+for l in range(1,2*i-1):# generates 2i-1 spacing
+print(" ", end=" ")
+if (i == 0):
+for k in range(1,n-1):
+print(chr(x-2),end=" ")#for 1st row only, decrement the chr value by two as x was incremented in earlier step
+x=x-1
+else:
+print(" ", end=" ") #one spacing extra every time as it is 2i-1 (i is starting from 0)
+for m in range(1, n):
+print(chr(x-1),end=" ")
+x=x-1
+n=n-1
+print(" ")
+```
+### Code for Pascal triangle
+```
+n=7
+for j in range(1, n+1) :
+for k in range (n,j,-1):
+print(" ", end=" ")
+a=1
+for i in range(1, j+1) :
+print(a, end=" ")
+a=int(a*(j-i)/i)
+print ("\r")
+```
 # Disclaimer 
 * For Educational Purpose
 * The repository is made under open Source Licensing for helping the community 
